@@ -1,0 +1,19 @@
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+</head>
+  <body>
+    <H1>Xbox Live Clan Members</H1>
+    <h2>Display Name MembershipID Unique Name</h2>
+    {% for item in xboxclanmembers %}
+        <li>{{ item.user.displayName }} - {{item.user.membershipId}} - {{item.user.uniqueName}}</li>
+    {% endfor %}
+	<br><b>Member Count: {{xboxMemberCount}}</b><br>	
+    <H1>PSN Clan Members</H1>
+    <h2>Display Name MembershipID Unique Name</h2>
+    {% for item in psnclanmembers %}
+        <li>{{ item.user.displayName }} - {{item.user.membershipId}} - {{item.user.uniqueName}}</li>
+    {% endfor %}
+	<br><b>Member Count: {{psnMemberCount}}</b><br>	
+  </body>
+</html>
